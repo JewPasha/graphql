@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <script type="module" src="../static/js/graphql.js"></script>
+    <title>GraphQL</title>
+</head>
+<body>
+    
+    <div style="display: flex; justify-content: center; min-width: 1422px;">
+        <div class="userData border">
+            <h1 id="username"></h1><br>
+            <a style="font-weight: bold; font-size: 20px;">FULL NAME</a><br>
+            <a id="firstName"></a>
+            <a id="lastName"></a><br><br>
+            <a style="font-weight: bold; font-size: 20px;">LOCATION</a><br>
+            <a id="location"></a><br><br>
+            <a style="font-weight: bold; font-size: 20px;">AGE</a><br>
+            <a id="age"></a><br><br>
+            <button id="logoutBtn" class="button-33">Log out</button>
+        </div>
+        <div class="auditData border">
+            <h1>Audit information</h1><br>
+            <a style="font-weight: bold; font-size: 20px;">AUDIT RATIO</a><br>
+            <a id="auditRatio"></a><br><br>
+            <a style="font-weight: bold; font-size: 20px;">AUDIT XP DONE ⬆</a><br>
+            <a id="auditsDone"></a><br><br>
+            <a style="font-weight: bold; font-size: 20px;">AUDIT XP RECEIVED ⬇</a><br>
+            <a id="auditsReceived"></a><br><br>
+        </div>
+        
+        <div class="xpDataAndLogout border">
+            <h1>Total XP</h1><br><br><br>
+            <a style="font-weight: bold; font-size: 40px;" id="xp"></a><br><br><br><br><br>
+            
+        </div>
+    </div>
+    <div class="container">
+        <div id="progressGraphContainer" class="progressGraphContainer border"></div>
+        <div id="xpByTaskContainer" class="xpByTaskContainer border">
+            <div class="xpByTaskInnerContainer">
+                <div style="width: fit-content; height: 30px; position: absolute; bottom: 0;">
+                    <svg id="comparisonGraph" width="700px" height="100%"></svg>
+                </div>
+                <div id="xpByTaskGraphContainer" class="xpByTaskGraphContainer">
+                    <svg id="barGraph" width="100%" height="100%"></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
